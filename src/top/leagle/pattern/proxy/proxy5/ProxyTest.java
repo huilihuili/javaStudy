@@ -36,6 +36,10 @@ public class ProxyTest {
 		nonOwnerProxy.setHotOrNotRating(3);
 		System.out.println("Rating set from non owner proxy");
 		System.out.println("Rating is " + nonOwnerProxy.getHotOrNotRating());
+
+		System.out.println();
+		System.out.println(personBean1.getInterests());
+		System.out.println(personBean1.getHotOrNotRating());
 	}
 
 	public PersonBean getOwnerProxy(PersonBean personBean) {
