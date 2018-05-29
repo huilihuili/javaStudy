@@ -36,4 +36,6 @@ public class ShiftStudy {
 		b = (byte) (b >>> 10);
 		System.out.println(Integer.toBinaryString(b));
 	}
+	
+	
 }
