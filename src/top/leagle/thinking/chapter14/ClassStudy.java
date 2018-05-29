@@ -1,5 +1,12 @@
 package top.leagle.thinking.chapter14;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.naming.spi.DirStateFactory.Result;
+
 import org.junit.Test;
 
 public class ClassStudy {
@@ -39,9 +46,13 @@ public class ClassStudy {
 		test(new Derived());
 	}
 
-	class Base {
-	}
 
-	class Derived extends Base {
-	}
+
 }
+
+class Base {
+}
+
+class Derived extends Base {
+}
+
