@@ -9,12 +9,15 @@ public class PatternStudy {
 	@Test
 	public void test1() {
 		String s = "Never give up! Never surrender!";
+
+		System.out.println("--- 贪婪型 ---");
 		Pattern p = Pattern.compile("Never.*!");
 		Matcher m = p.matcher(s);
 		while (m.find()) {
 			System.out.println(m.group());
 		}
 
+		System.out.println("--- 勉强型 ---");
 		p = Pattern.compile("Never.*?!");
 		m = p.matcher(s);
 		while (m.find()) {
@@ -25,6 +28,7 @@ public class PatternStudy {
 	@Test
 	public void test2() {
 		String s = "I love study!";
+
 		StringBuffer sbuf = new StringBuffer();
 		Pattern p = Pattern.compile("[aeiou]");
 		Matcher m = p.matcher(s);
@@ -50,9 +54,9 @@ public class PatternStudy {
 		Pattern p = Pattern.compile("(\\d+[.]\\d+[.]\\d+[.]\\d+)@(\\d{2}/\\d{2}/\\d{4})");
 		Matcher m = p.matcher(s);
 		while (m.find()) {
-			String ip = m.group(1);
-			String date = m.group(2);
-			System.out.format("Threat on %s from %s\n", date, ip);
+			System.out.println("m.group() = " + m.group());
+			System.out.println("m.group(1) = " + m.group(1));
+			System.out.println("m.group(2) = " + m.group(2));
 		}
 	}
 }
