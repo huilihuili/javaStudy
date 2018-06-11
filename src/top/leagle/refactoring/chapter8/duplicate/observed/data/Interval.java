@@ -1,4 +1,4 @@
-package top.leagle.refactoring.chapter8.duplicate.observed.data.improvement;
+package top.leagle.refactoring.chapter8.duplicate.observed.data;
 
 import java.util.Observable;
 
