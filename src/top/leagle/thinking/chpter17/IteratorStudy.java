@@ -15,7 +15,7 @@ public class IteratorStudy {
 
 	@Test
 	public void test1() {
-		List<String> a = Arrays.asList("a b c d".split(" "));
+		List<String> a = Arrays.asList("a", "b", "c", "d");
 		ListIterator<String> it = a.listIterator();
 
 		System.out.println("it.hasNext() = " + it.hasNext());
@@ -30,7 +30,7 @@ public class IteratorStudy {
 
 	@Test
 	public void test2() {
-		List<String> a = new ArrayList<>(Arrays.asList("a b c d".split(" ")));
+		List<String> a = new ArrayList<>(Arrays.asList("a", "b", "c", "d"));
 		ListIterator<String> it = a.listIterator();
 		it.add("47");
 		System.out.println(a);

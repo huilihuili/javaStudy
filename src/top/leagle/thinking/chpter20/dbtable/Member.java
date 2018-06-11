@@ -47,5 +47,4 @@ public class Member {
 	public void setHandle(String handle) {
 		this.handle = handle;
 	}
-
 }

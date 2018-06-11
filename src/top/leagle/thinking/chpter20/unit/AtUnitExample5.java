@@ -55,5 +55,4 @@ public class AtUnitExample5 {
 		output.print("test3");
 		return true;
 	}
-
 }
