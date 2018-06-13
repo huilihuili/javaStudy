@@ -6,19 +6,6 @@ public class Employee {
 		this.type = EmployeeType.newType(type);
 	}
 
-	public double payAmount() {
-		switch (getType()) {
-		case EmployeeType.ENGINEER:
-			return monthlySalary;
-		case EmployeeType.SALESMAN:
-			return monthlySalary + commission;
-		case EmployeeType.MANAGER:
-			return monthlySalary + bonus;
-		default:
-			throw new RuntimeException("Incorrect Employee");
-		}
-	}
-
 	public int getType() {
 		return type.getType();
 	}
@@ -27,16 +14,13 @@ public class Employee {
 		this.type = EmployeeType.newType(type);
 	}
 
-	@Override
-	public String toString() {
-		return "" + getType();
-	}
-
 	private EmployeeType type;
-	private double monthlySalary;
-	private double commission;
-	private double bonus;
 
 	public static void main(String[] args) {
+		Employee engineer = new Employee(EmployeeType.ENGINEER);
+		Employee manager = new Employee(EmployeeType.MANAGER);
+
+		System.out.println(engineer.getType());
+		System.out.println(manager.getType());
 	}
 }

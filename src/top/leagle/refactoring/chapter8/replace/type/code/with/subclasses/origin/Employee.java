@@ -10,16 +10,15 @@ public class Employee {
 		this.type = type;
 	}
 
-	@Override
-	public String toString() {
-		return "" + type;
+	public int getType() {
+		return type;
 	}
 
 	public static void main(String[] args) {
-		Employee employee = new Employee(Employee.ENGINEER);
-		System.out.println(employee);
+		Employee engineer = new Employee(Employee.ENGINEER);
+		System.out.println(engineer.getType());
 
-		employee = new Employee(Employee.MANAGER);
-		System.out.println(employee);
+		Employee manager = new Employee(Employee.MANAGER);
+		System.out.println(manager.getType());
 	}
 }
