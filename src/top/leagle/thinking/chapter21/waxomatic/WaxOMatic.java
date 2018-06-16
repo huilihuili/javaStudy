@@ -1,4 +1,4 @@
-package top.leagle.thinking.chapter21;
+package top.leagle.thinking.chapter21.waxomatic;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
