@@ -24,7 +24,7 @@ public class ActiveObjectDemo {
 			print("sleep() interrupted");
 		}
 	}
-
+ 
 	public Future<Integer> calculateInt(final int x, final int y) {
 		return ex.submit(new Callable<Integer>() {
 			public Integer call() {
