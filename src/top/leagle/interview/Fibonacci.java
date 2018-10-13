@@ -1,7 +1,5 @@
 package top.leagle.interview;
 
-import top.leagle.thinking.chapter21.ReaderWriterList;
-
 public class Fibonacci {
 	public static void main(String[] args) {
 		System.out.println(new Fibonacci().fibonacci(100));

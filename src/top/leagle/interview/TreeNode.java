@@ -12,6 +12,11 @@ public class TreeNode {
 		val = x;
 	}
 
+	@Override
+	public String toString() {
+		return "TreeNode [val=" + val + ", left=" + left + ", right=" + right + "]";
+	}
+
 	public static TreeNode getTreeNode() {
 		TreeNode treeNode1 = new TreeNode(10);
 		TreeNode treeNode2 = new TreeNode(6);
@@ -35,7 +40,7 @@ public class TreeNode {
 
 	public void print() {
 		Queue<TreeNode> queue = new LinkedList<>();
-		
+
 		if (this != null) {
 			queue.add(this);
 		}
