@@ -18,17 +18,19 @@ class TaskPortion implements Runnable {
 	}
 
 	public void run() {
-		try {
-			doWork();
-			latch.countDown();
-		} catch (InterruptedException ex) {
-			// Acceptable way to exit
+		for (int i = 0; i < 2; i++) {
+			try {
+				doWork(i);
+				latch.countDown();
+			} catch (InterruptedException ex) {
+
+			}
 		}
 	}
 
-	public void doWork() throws InterruptedException {
+	public void doWork(int i) throws InterruptedException {
 		TimeUnit.MILLISECONDS.sleep(rand.nextInt(2000));
-		System.out.println(this + "completed");
+		System.out.println(this + "completed " + i);
 	}
 
 	public String toString() {
@@ -47,12 +49,15 @@ class WaitingTask implements Runnable {
 	}
 
 	public void run() {
-		try {
-			latch.await();
-			System.out.println("Latch barrier passed for " + this);
-		} catch (InterruptedException ex) {
-			System.out.println(this + " interrupted");
+		for (int i = 0; i < 2; i++) {
+			try {
+				latch.await();
+				System.out.println("Latch barrier passed for " + this);
+			} catch (InterruptedException ex) {
+				System.out.println(this + " interrupted");
+			}
 		}
+
 	}
 
 	public String toString() {
