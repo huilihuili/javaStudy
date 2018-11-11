@@ -1,6 +1,7 @@
 package top.leagle.basic;
 
 import org.junit.Test;
+import org.junit.validator.PublicClassValidator;
 
 public class ArrayTest {
 	public int a = 0;
@@ -96,6 +97,16 @@ public class ArrayTest {
 		System.out.println(c[0]);
 		c = b;
 		System.out.println(c[0]);
+	}
+
+	@Test
+	public void test1() {
+		float f = 42.0f;
+		float f1[] = new float[2];
+		float f2[] = new float[2];
+		float[] f3 = f1;
+		long x = 42;
+		f1[0] = 42.0f;
 	}
 
 }

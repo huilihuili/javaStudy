@@ -1,6 +1,11 @@
 package top.leagle.basic.extend;
 
 class Father {
+	public int i;
+   	public final void hehe() {
+
+	}
+
 	public void fun() {
 		System.out.println("father");
 	}

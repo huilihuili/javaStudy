@@ -6,6 +6,22 @@ public class FinalTest {
 	public static double j = Math.random();
 	public final double i = Math.random();
 
+	public static final void a() {
+
+	}
+
+	public static final void a(int a) {
+
+	}
+
+	public final void a(int a, int b) {
+
+	}
+
+	public void a(int a, float b) {
+
+	}
+
 	@Test
 	public void test1() {
 		String a = "hello2";
