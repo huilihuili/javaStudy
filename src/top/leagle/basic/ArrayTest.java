@@ -1,5 +1,8 @@
 package top.leagle.basic;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.Test;
 import org.junit.validator.PublicClassValidator;
 
@@ -107,6 +110,15 @@ public class ArrayTest {
 		float[] f3 = f1;
 		long x = 42;
 		f1[0] = 42.0f;
+	}
+
+	@Test
+	public void listAddTest() {
+		List<Object> list = new ArrayList<>();
+		list.add(list);
+		list.add(1);
+		list.add("Me");
+		System.out.println(list);
 	}
 
 }
