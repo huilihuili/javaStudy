@@ -5,7 +5,10 @@ import org.junit.Test;
 public class FinalTest {
 	public static double j = Math.random();
 	public final double i = Math.random();
-
+	
+	// final ”Ú±ÿ–Î≥ı ºªØ
+	// public final int k;
+	
 	public static final void a() {
 
 	}
