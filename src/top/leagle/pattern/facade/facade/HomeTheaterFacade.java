@@ -1,30 +1,24 @@
 package top.leagle.pattern.facade.facade;
 
 import top.leagle.pattern.facade.hometheater.Amplifier;
-import top.leagle.pattern.facade.hometheater.CdPlayer;
 import top.leagle.pattern.facade.hometheater.DvdPlayer;
 import top.leagle.pattern.facade.hometheater.PopcornPopper;
 import top.leagle.pattern.facade.hometheater.Projector;
 import top.leagle.pattern.facade.hometheater.Screen;
 import top.leagle.pattern.facade.hometheater.TheaterLights;
-import top.leagle.pattern.facade.hometheater.Tuner;
 
 public class HomeTheaterFacade {
 	private Amplifier amplifier;
-	private Tuner tuner;
 	private DvdPlayer dvdPlayer;
-	private CdPlayer cdPlayer;
 	private Projector projector;
 	private TheaterLights theaterLights;
 	private Screen screen;
 	private PopcornPopper popcornPopper;
 
-	public HomeTheaterFacade(Amplifier amplifier, Tuner tuner, DvdPlayer dvdPlayer, CdPlayer cdPlayer,
-			Projector projector, TheaterLights theaterLights, Screen screen, PopcornPopper popcornPopper) {
+	public HomeTheaterFacade(Amplifier amplifier, DvdPlayer dvdPlayer, Projector projector, TheaterLights theaterLights,
+			Screen screen, PopcornPopper popcornPopper) {
 		this.amplifier = amplifier;
-		this.tuner = tuner;
 		this.dvdPlayer = dvdPlayer;
-		this.cdPlayer = cdPlayer;
 		this.projector = projector;
 		this.theaterLights = theaterLights;
 		this.screen = screen;

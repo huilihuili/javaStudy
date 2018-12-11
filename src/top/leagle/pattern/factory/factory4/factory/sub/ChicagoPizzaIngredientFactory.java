@@ -7,7 +7,6 @@ import top.leagle.pattern.factory.factory4.indregent.sub.FrozenClams;
 import top.leagle.pattern.factory.factory4.indregent.sub.ThickCrustDough;
 
 public class ChicagoPizzaIngredientFactory implements PizzaIngredientFactory {
-
 	@Override
 	public Dough createDough() {
 		return new ThickCrustDough();
@@ -17,5 +16,4 @@ public class ChicagoPizzaIngredientFactory implements PizzaIngredientFactory {
 	public Clams createClams() {
 		return new FrozenClams();
 	}
-
 }

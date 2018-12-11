@@ -20,7 +20,6 @@ public class ChicagoPizzaStore extends PizzaStore {
 			pizza = new ChicagoStyleClamPizza();
 		}
 		return pizza;
-
 	}
 
 }

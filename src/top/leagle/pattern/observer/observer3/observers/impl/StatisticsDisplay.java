@@ -33,5 +33,4 @@ public class StatisticsDisplay implements Observer, DisplayElement {
 	public void display() {
 		System.out.println(String.format("气象统计：temp:%s humidity:%s pressure:%s", temp, humidity, pressure));
 	}
-
 }

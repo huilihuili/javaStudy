@@ -8,6 +8,9 @@ import top.leagle.pattern.strategy.strategy3.superclass.sub.MallardDuck;
 import top.leagle.pattern.strategy.strategy3.superclass.sub.ModelDuck;
 
 public class DuckTest {
+	public static void main(String[] args) {
+
+	}
 
 	@Test
 	public void test1() {

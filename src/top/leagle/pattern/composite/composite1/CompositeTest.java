@@ -1,7 +1,5 @@
 package top.leagle.pattern.composite.composite1;
 
-import org.junit.Test;
-
 import top.leagle.pattern.composite.composite1.component.MenuComponent;
 import top.leagle.pattern.composite.composite1.component.sub.Menu;
 import top.leagle.pattern.composite.composite1.component.sub.MenuItem;
@@ -9,8 +7,7 @@ import top.leagle.pattern.composite.composite1.waitress.Waitress;
 
 public class CompositeTest {
 
-	@Test
-	public void test1() {
+	public static void main(String[] args) {
 		MenuComponent allMenus = new Menu("all menus", "all menus combined");
 		MenuComponent pancakeHouseMenu = new Menu("pancake house menu", "breakfast");
 		MenuComponent dinerMenu = new Menu("diner menu", "lunch");

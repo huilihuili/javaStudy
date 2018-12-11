@@ -1,7 +1,7 @@
 package top.leagle.pattern.iterator.iterator2.iterator;
 
-public interface Iterator {
+public interface Iterator<E> {
 	boolean hasNext();
 
-	Object next();
+	E next();
 }

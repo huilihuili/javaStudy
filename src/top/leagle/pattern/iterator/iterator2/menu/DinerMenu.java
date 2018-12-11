@@ -3,7 +3,7 @@ package top.leagle.pattern.iterator.iterator2.menu;
 import top.leagle.pattern.iterator.iterator2.iterator.Iterator;
 import top.leagle.pattern.iterator.iterator2.iterator.sub.DinerMenuIterator;
 
-public class DinerMenu {
+public class DinerMenu implements Menu<MenuItem> {
 	private static final int MAX_ITEMS = 4;
 	private int numberOfItems = 0;
 	private MenuItem[] menuItems;
@@ -27,7 +27,8 @@ public class DinerMenu {
 		}
 	}
 
-	public Iterator createIterator() {
+	@Override
+	public Iterator<MenuItem> createIterator() {
 		return new DinerMenuIterator(menuItems);
 	}
 }

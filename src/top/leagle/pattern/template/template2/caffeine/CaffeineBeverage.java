@@ -9,7 +9,7 @@ public abstract class CaffeineBeverage {
 		if (customerWantsCondiments()) {
 			addCondiments();
 		}
-           	}
+	}
 
 	public abstract void brew();
 

@@ -20,7 +20,6 @@ public class NYPizzaStore extends PizzaStore {
 			pizza = new NYStyleClamPizza();
 		}
 		return pizza;
-
 	}
 
 }

@@ -8,14 +8,12 @@ import top.leagle.pattern.observer.observer2.observers.impl.StatisticsDisplay;
 import top.leagle.pattern.observer.observer2.subjects.impl.WeatherData;
 
 public class ObserverTest {
-
-	@Test
-	public void test1() {
+	public static void main(String[] args) {
 		WeatherData weatherData = new WeatherData();
-		CurrenConditionDisplay currenConditionDisplay = new CurrenConditionDisplay(weatherData);
-		StatisticsDisplay statisticsDisplay = new StatisticsDisplay(weatherData);
-		ForecastDisplay forecastDisplay = new ForecastDisplay(weatherData);
+		new CurrenConditionDisplay(weatherData);
+		new StatisticsDisplay(weatherData);
+		new ForecastDisplay(weatherData);
 
-		weatherData.setMeasurements((float) 1.0, (float) 2.0, (float) 3.0);
+		weatherData.setMeasurements(1.0f, 2.0f, 3.0f);
 	}
 }

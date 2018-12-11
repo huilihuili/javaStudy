@@ -18,14 +18,14 @@ public class WeatherData {
 		currenConditionDisplay = new CurrenConditionDisplay();
 		statisticsDisplay = new StatisticsDisplay();
 		forecastDisplay = new ForecastDisplay();
-		
+
 	}
 
 	public void measurementsChanged() {
+		// 当数据发生变化时
 		currenConditionDisplay.update(temp, humidity, pressure);
 		statisticsDisplay.update(temp, humidity, pressure);
 		forecastDisplay.update(temp, humidity, pressure);
-		
 	}
 
 	public float getTemp() {

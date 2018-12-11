@@ -4,6 +4,50 @@ import org.junit.Test;
 
 public class VariableTest {
 
+	public static void main(String[] args) {
+		int a = 2;
+		int b = a;
+		b--;
+		System.out.println(a);
+		System.out.println(b);
+
+		// String aString = null;
+		// String bString = aString;
+		// aString = "5";
+		//
+		// System.out.println(aString);
+		// System.out.println(bString);
+
+		// String aString = "4";
+		// String bString = aString;
+		// aString = "5";
+		//
+		// System.out.println(aString);
+		// System.out.println(bString);
+
+		// VariableTest aTest = null;
+		// VariableTest bTest = aTest;
+		// aTest = new VariableTest();
+		// System.out.println(aTest == null);
+		// System.out.println(bTest == null);
+
+		// VariableTest aTest = new VariableTest();
+		// VariableTest bTest = aTest;
+		// aTest = null;
+		// System.out.println(aTest == null);
+		// System.out.println(bTest == null);
+
+		// VariableTest aTest = null;
+		// VariableTest bTest = null;
+		// System.out.println(aTest == bTest);
+
+		// VariableTest aTest = new VariableTest();
+		// VariableTest bTest = aTest;
+		// System.out.println(aTest == bTest);
+		// aTest = new VariableTest();
+		// System.out.println(aTest == bTest);
+	}
+
 	@Test
 	public void test1() {
 		VariableFunction(1, 2, 3);
@@ -49,9 +93,9 @@ public class VariableTest {
 		System.out.println("i, j, args ---");
 	}
 
-//	public void VariableFunction(int i, int j, int k, int... args) {
-//		System.out.println("i, j, k, args ---");
-//	}
+	// public void VariableFunction(int i, int j, int k, int... args) {
+	// System.out.println("i, j, k, args ---");
+	// }
 
 	public void VariableFunction(int i, int j, int k, int m, int... args) {
 		System.out.println("i, j, k, m, args ---");

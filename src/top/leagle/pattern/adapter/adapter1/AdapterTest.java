@@ -11,6 +11,13 @@ import top.leagle.pattern.adapter.adapter1.turkey.sub.WildTurkey;
 
 public class AdapterTest {
 
+	public static void main(String[] args) {
+		Turkey turkey = new WildTurkey();
+		Duck duckAdapter = new DuckAdapter(turkey);
+		duckAdapter.quack();
+		duckAdapter.fly();
+	}
+
 	@Test
 	public void test1() {
 		Duck duck = new MallardDuck();
