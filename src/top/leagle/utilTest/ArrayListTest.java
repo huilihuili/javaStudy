@@ -2,12 +2,10 @@ package top.leagle.utilTest;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.junit.Test;
-
-import com.sun.org.apache.bcel.internal.generic.NEW;
-import com.sun.org.apache.xpath.internal.operations.String;
 
 public class ArrayListTest {
 
@@ -95,9 +93,23 @@ public class ArrayListTest {
 	}
 
 	static class Food {
+		public void test() {
+
+		}
 	}
 
 	static class Fruit extends Food {
+		@Override
+		public void test() {
+		}
+
+		public String name;
+
+		private class Abc {
+			public void fun() {
+				Fruit.this.test();
+			}
+		}
 	}
 
 	static class Apple extends Fruit {
@@ -175,6 +187,48 @@ public class ArrayListTest {
 		List<? extends Fruit> list = new ArrayList<>();
 		List<Apple> list2 = new ArrayList<>();
 		list = list2;
+	}
+
+	@Test
+	public void toArrayTest() {
+		ArrayList<Fruit> fruits = new ArrayList<>();
+		fruits.add(new Fruit());
+		fruits.add(new Apple());
+		fruits.get(0).name = "hello";
+
+		Object[] copy = fruits.toArray();
+		System.out.println(((Fruit) copy[0]).name);
+
+		((Fruit) copy[0]).name = "world";
+		System.out.println(fruits.get(0).name);
+		System.out.println(((Fruit) copy[0]).name);
+
+		Fruit[] apples = fruits.toArray(new Fruit[0]);
+		System.out.println(apples.length);
+
+		Fruit[] apples2 = fruits.toArray(new Fruit[3]);
+		System.out.println(apples2.length);
+		System.out.println(apples2[2]);
+	}
+
+	@Test
+	public void subListTest() {
+		ArrayList<Integer> arrayList = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
+		List<Integer> subList = arrayList.subList(0, 3);
+		System.out.println(arrayList);
+		System.out.println(subList);
+
+		subList.set(0, 6);
+		System.out.println(arrayList);
+		System.out.println(subList);
+
+		subList.add(10);
+		System.out.println(arrayList);
+		System.out.println(subList);
+
+		arrayList.add(10);
+		System.out.println(arrayList);
+		System.out.println(subList); // 报错
 	}
 
 }
