@@ -190,7 +190,7 @@ public class ArrayListTest {
 	}
 
 	@Test
-	public void toArrayTest() {
+	public void toArrayTest3() {
 		ArrayList<Fruit> fruits = new ArrayList<>();
 		fruits.add(new Fruit());
 		fruits.add(new Apple());
@@ -229,6 +229,28 @@ public class ArrayListTest {
 		arrayList.add(10);
 		System.out.println(arrayList);
 		System.out.println(subList); // 报错
+	}
+
+	@Test
+	public void systemArrayCopyTest() {
+		Fruit[] fruits = { new RedApple(), new Apple() };
+		Apple[] apples = new Apple[2];
+		System.arraycopy(fruits, 0, apples, 0, 2);
+		System.out.println(Arrays.asList(apples));
+		RedApple[] redApples = new RedApple[2];
+		try {
+			System.arraycopy(fruits, 0, redApples, 0, 2);
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		System.out.println(Arrays.asList(redApples));
+
+		String[] strings = { "1", "2" };
+		String[] strings2 = strings;
+		System.arraycopy(strings, 0, strings2, 0, 2);
+		strings2[0] = "3";
+		System.out.println(Arrays.asList(strings));
+		System.out.println(Arrays.asList(strings2));
 	}
 
 }
