@@ -1,18 +1,16 @@
-package top.leagle.pattern.state.state2.machine;
+package top.leagle.pattern.state.state3.machine;
 
-import top.leagle.pattern.state.state2.state.State;
-import top.leagle.pattern.state.state2.state.sub.HasQuarterState;
-import top.leagle.pattern.state.state2.state.sub.NoQuarterState;
-import top.leagle.pattern.state.state2.state.sub.SoldOutState;
-import top.leagle.pattern.state.state2.state.sub.SoldState;
-import top.leagle.pattern.state.state2.state.sub.WinnerState;
+import top.leagle.pattern.state.state3.state.State;
+import top.leagle.pattern.state.state3.state.sub.HasQuarterState;
+import top.leagle.pattern.state.state3.state.sub.NoQuarterState;
+import top.leagle.pattern.state.state3.state.sub.SoldOutState;
+import top.leagle.pattern.state.state3.state.sub.SoldState;
 
 public class GumballMachine {
 	private State soldOutState;
 	private State noQuarterState;
 	private State hasQuarterState;
 	private State soldState;
-	private State winnerState;
 
 	private State state = soldOutState;
 	private int count = 0;
@@ -22,7 +20,6 @@ public class GumballMachine {
 		noQuarterState = new NoQuarterState(this);
 		hasQuarterState = new HasQuarterState(this);
 		soldState = new SoldState(this);
-		winnerState = new WinnerState(this);
 
 		this.count = numberGumballs;
 		if (numberGumballs > 0) {
@@ -99,14 +96,6 @@ public class GumballMachine {
 
 	public void setCount(int count) {
 		this.count = count;
-	}
-
-	public State getWinnerState() {
-		return winnerState;
-	}
-
-	public void setWinnerState(State winnerState) {
-		this.winnerState = winnerState;
 	}
 
 	@Override

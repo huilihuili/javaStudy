@@ -1,6 +1,6 @@
-package top.leagle.pattern.state.state2.state.sub;
+package top.leagle.pattern.state.state3.state.sub;
 
-import top.leagle.pattern.state.state2.state.State;
+import top.leagle.pattern.state.state3.state.State;
 
 public class SoldOutState implements State {
 

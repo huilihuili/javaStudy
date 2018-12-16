@@ -1,7 +1,7 @@
-package top.leagle.pattern.state.state2.state.sub;
+package top.leagle.pattern.state.state3.state.sub;
 
-import top.leagle.pattern.state.state2.machine.GumballMachine;
-import top.leagle.pattern.state.state2.state.State;
+import top.leagle.pattern.state.state3.machine.GumballMachine;
+import top.leagle.pattern.state.state3.state.State;
 
 // 没有硬币的状态
 public class NoQuarterState implements State {
