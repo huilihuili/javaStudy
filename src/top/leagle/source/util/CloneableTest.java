@@ -13,7 +13,6 @@ public class CloneableTest {
 		System.out.println(cloneableApp1Copy);
 
 		System.out.println("\n--- 分割线 ---\n");
-
 		CloneableApp2 cloneableApp2 = new CloneableApp2(2);
 		cloneableApp2.elementData[0] = new String("EagleLi");
 		cloneableApp2.elementData[1] = new Integer(1);
@@ -21,6 +20,11 @@ public class CloneableTest {
 		cloneableApp2Copy.elementData[0] = new String("EagleLi1");
 		System.out.println(cloneableApp2);
 		System.out.println(cloneableApp2Copy);
+		
+		System.out.println("\n--- 分割线 ---\n");
+		System.out.println(cloneableApp1.elementData == cloneableApp1Copy.elementData);
+		System.out.println(cloneableApp2.elementData == cloneableApp2Copy.elementData);
+
 	}
 
 	public static class CloneableApp1 implements Cloneable {

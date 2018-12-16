@@ -22,6 +22,11 @@ public class ArraysTest {
 		copies3[0].string = "EagleLi1";
 		System.out.println(Arrays.asList(copies));
 		System.out.println(Arrays.asList(copies3));
+		
+		System.out.println("\n--- 分割线 ---\n");
+		
+		System.out.println(copies2[0] == copies[0]);
+		System.out.println(copies2[0].string == copies[0].string);
 	}
 
 	public static class Copy {
