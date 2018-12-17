@@ -1,29 +1,33 @@
 package top.leagle.pattern.bridge.after;
 
 public abstract class RemoteControl {
-	abstract void setChannel(int chnnel);
-}
+	private TV tv;
 
-class RCAControl extends RemoteControl {
-
-	@Override
-	void setChannel(int chnnel) {
-		tuneChnnel(chnnel);
+	public RemoteControl(TV tv) {
+		this.tv = tv;
 	}
 
-	private void tuneChnnel(int chnnel) {
-		System.out.println("RCA tuneChnnel...");
+	protected void setChannel(int chnnel) {
+		tv.tuneChnnel(chnnel);
 	}
 }
 
-class SonyControl extends RemoteControl {
+class ConcreteControl extends RemoteControl {
+	private int currenStation;
 
-	@Override
-	void setChannel(int chnnel) {
-		tuneChnnel(chnnel);
+	public ConcreteControl(TV tv) {
+		super(tv);
 	}
 
-	private void tuneChnnel(int chnnel) {
-		System.out.println("Sony tuneChnnel...");
+	public void nextChannel() {
+		setChannel(++currenStation);
+	}
+
+	public int getCurrenStation() {
+		return currenStation;
+	}
+
+	public void setCurrenStation(int currenStation) {
+		this.currenStation = currenStation;
 	}
 }

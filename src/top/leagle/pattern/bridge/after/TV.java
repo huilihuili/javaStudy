@@ -1,4 +1,4 @@
-package top.leagle.pattern.bridge.before;
+package top.leagle.pattern.bridge.after;
 
 public abstract class TV {
 	abstract void tuneChnnel(int chnnel);
